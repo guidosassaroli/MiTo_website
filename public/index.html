@@ -6,7 +6,7 @@
 <title>MiTo — Your money, speaking your language</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -929,6 +929,216 @@
 
   .cta-btn:hover { background: var(--gold-light); }
 
+  /* ── APP PREVIEW ── */
+  .preview-section {
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .preview-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  /* The app mockup frame */
+  .app-frame {
+    background: #f7f4ef;
+    border: 1px solid rgba(10,10,15,0.10);
+    border-radius: 20px;
+    padding: 32px 28px 36px;
+    box-shadow: 0 32px 80px rgba(10,10,15,0.10), 0 8px 24px rgba(10,10,15,0.06);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .app-frame::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .app-wordmark {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8a9e8c;
+    margin-bottom: 24px;
+  }
+
+  /* Balance */
+  .app-balance-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .app-avatar-sm {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: rgba(100,120,200,0.15);
+    border: 1px solid rgba(100,120,200,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: #6478c8;
+    font-family: 'DM Sans', sans-serif;
+    flex-shrink: 0;
+  }
+
+  .app-balance-who {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8a8680;
+  }
+
+  .app-balance-num {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.8rem, 7vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 6px;
+    color: #2d6e48; /* positive green */
+  }
+
+  .app-balance-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: #8a8680;
+    margin-bottom: 24px;
+  }
+
+  /* Rows */
+  .app-divider {
+    height: 1px;
+    background: rgba(10,10,15,0.08);
+    margin-bottom: 0;
+  }
+
+  .app-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(10,10,15,0.07);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .app-date {
+    flex-shrink: 0;
+    width: 26px;
+    text-align: center;
+  }
+
+  .app-date-day {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1;
+    color: #0a0a0f;
+  }
+
+  .app-date-mon {
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a8680;
+    margin-top: 2px;
+  }
+
+  .app-row-body { flex: 1; min-width: 0; }
+
+  .app-row-desc {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0a0a0f;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 3px;
+  }
+
+  .app-row-meta {
+    font-size: 0.7rem;
+    color: #8a8680;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .app-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .app-row-amounts { text-align: right; flex-shrink: 0; }
+
+  .app-total {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0a0a0f;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 2px;
+  }
+
+  .app-share {
+    font-size: 0.72rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .app-share.pos { color: #2d6e48; }
+  .app-share.neg { color: #9e3a1a; }
+
+  .app-section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8a8680;
+    padding: 16px 0 10px;
+  }
+
+  .app-group-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(10,10,15,0.07);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .app-group-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .app-group-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0a0a0f;
+    flex: 1;
+  }
+
+  .app-group-members {
+    font-size: 0.7rem;
+    color: #8a8680;
+  }
+
   /* ── ABOUT ── */
   .about-section {
     padding: 100px 60px;
@@ -1283,6 +1493,122 @@
       <div class="feature-icon">🔒</div>
       <div class="feature-title">Bank-level security</div>
       <p class="feature-desc">Read-only by default. Transfers require explicit confirmation. End-to-end encrypted. You're always in control — MiTo never touches your money without your say.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APP PREVIEW -->
+<section class="preview-section">
+  <div class="preview-inner">
+
+    <div class="fade-in">
+      <p class="section-label">The app</p>
+      <h2 class="section-title">Everything in<br>one <em>glance</em></h2>
+      <p style="font-size:1rem; line-height:1.75; color:var(--muted); margin-bottom:28px;">
+        MiTo pulls your balances, shared expenses, and group splits into a single, calm view. No noise — just the numbers that matter, readable at a glance.
+      </p>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:34px; height:34px; background:var(--paper); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.85rem;">📊</div>
+          <div>
+            <div style="font-size:0.9rem; font-weight:500; margin-bottom:3px;">Net balance, always visible</div>
+            <div style="font-size:0.85rem; color:var(--muted); line-height:1.6;">See at once what you're owed and what you owe, across all groups.</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:14px;">
+          <div style="width:34px; height:34px; background:var(--paper); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.85rem;">🧾</div>
+          <div>
+            <div style="font-size:0.9rem; font-weight:500; margin-bottom:3px;">Shared expenses, auto-categorised</div>
+            <div style="font-size:0.85rem; color:var(--muted); line-height:1.6;">Every split, every payer, every share — fetched live from Splitwise.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- App mockup inspired by the Splitwise widget -->
+    <div class="app-frame fade-in">
+      <div class="app-wordmark">MiTo · Overview</div>
+
+      <!-- Balance header -->
+      <div class="app-balance-label">
+        <div class="app-avatar-sm">MR</div>
+        <span class="app-balance-who">Mario's balance</span>
+      </div>
+      <div class="app-balance-num">+€ 240</div>
+      <div class="app-balance-sub">You're owed €320 · you owe €80</div>
+
+      <div class="app-divider"></div>
+
+      <!-- Groups -->
+      <div class="app-section-label">Groups</div>
+      <div class="app-group-row">
+        <div class="app-group-dot" style="background:#6478c8;"></div>
+        <div class="app-group-name">Ski Trip Val d'Isère</div>
+        <div class="app-group-members">4 members</div>
+      </div>
+      <div class="app-group-row">
+        <div class="app-group-dot" style="background:#c9a84c;"></div>
+        <div class="app-group-name">Flat — Via Torino 12</div>
+        <div class="app-group-members">3 members</div>
+      </div>
+
+      <!-- Expenses -->
+      <div class="app-section-label">Recent expenses</div>
+
+      <div class="app-row">
+        <div class="app-date">
+          <div class="app-date-day">28</div>
+          <div class="app-date-mon">Mar</div>
+        </div>
+        <div class="app-row-body">
+          <div class="app-row-desc">Rifugio dinner</div>
+          <div class="app-row-meta">
+            <span class="app-dot" style="background:#6478c8;"></span>
+            Ski Trip · paid by you
+          </div>
+        </div>
+        <div class="app-row-amounts">
+          <div class="app-total">€ 156.00</div>
+          <div class="app-share pos">+€ 117.00</div>
+        </div>
+      </div>
+
+      <div class="app-row">
+        <div class="app-date">
+          <div class="app-date-day">25</div>
+          <div class="app-date-mon">Mar</div>
+        </div>
+        <div class="app-row-body">
+          <div class="app-row-desc">Utility bill — March</div>
+          <div class="app-row-meta">
+            <span class="app-dot" style="background:#c9a84c;"></span>
+            Flat · paid by Alessio
+          </div>
+        </div>
+        <div class="app-row-amounts">
+          <div class="app-total">€ 240.00</div>
+          <div class="app-share neg">−€ 80.00</div>
+        </div>
+      </div>
+
+      <div class="app-row">
+        <div class="app-date">
+          <div class="app-date-day">22</div>
+          <div class="app-date-mon">Mar</div>
+        </div>
+        <div class="app-row-body">
+          <div class="app-row-desc">Ski passes × 4</div>
+          <div class="app-row-meta">
+            <span class="app-dot" style="background:#6478c8;"></span>
+            Ski Trip · paid by Louis
+          </div>
+        </div>
+        <div class="app-row-amounts">
+          <div class="app-total">€ 820.00</div>
+          <div class="app-share neg">−€ 205.00</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

@@ -1362,6 +1362,240 @@
     min-height: 1.5em;
   }
 
+  /* ── MOBILE / RESPONSIVE ── */
+  @media (max-width: 768px) {
+
+    /* Nav */
+    nav {
+      padding: 20px 24px;
+    }
+
+    .nav-links li {
+      display: none;
+    }
+
+    /* Show only the CTA button in nav on mobile */
+    .nav-links li:last-child {
+      display: list-item;
+    }
+
+    /* Hero */
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 100px 24px 60px;
+      gap: 48px;
+      min-height: auto;
+    }
+
+    .hero-visual {
+      display: none;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 10vw, 3.5rem);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      text-align: center;
+      padding: 16px 24px;
+    }
+
+    /* Sections */
+    section {
+      padding: 64px 24px;
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 8vw, 2.8rem);
+    }
+
+    /* Features */
+    .features-grid {
+      grid-template-columns: 1fr;
+      margin-top: 40px;
+    }
+
+    .feature-item {
+      padding: 32px 24px;
+    }
+
+    /* Send Money */
+    .send-section {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .send-visual {
+      height: 420px;
+    }
+
+    .send-floating {
+      top: -16px;
+      right: -8px;
+    }
+
+    /* Actions strip */
+    .actions-strip {
+      padding: 64px 24px;
+    }
+
+    .actions-grid {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 40px;
+    }
+
+    .action-tile {
+      padding: 28px 20px;
+    }
+
+    .action-emoji {
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+
+    .action-name {
+      font-size: 1rem;
+    }
+
+    /* Banks */
+    .banks-section {
+      padding: 64px 24px;
+    }
+
+    /* Quote / testimonial */
+    .quote-section {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      padding: 64px 24px;
+    }
+
+    .quote-text {
+      font-size: clamp(1.2rem, 5vw, 1.7rem);
+    }
+
+    .stat-stack {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .stat-item {
+      flex: 1 1 45%;
+      padding-top: 20px;
+      padding-right: 16px;
+    }
+
+    .stat-num {
+      font-size: 2.2rem;
+    }
+
+    /* CTA */
+    .cta-section {
+      padding: 80px 24px;
+    }
+
+    .cta-input-row {
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .cta-input {
+      border-right: 1px solid rgba(255,255,255,0.12);
+      border-bottom: none;
+    }
+
+    .cta-btn {
+      padding: 16px;
+    }
+
+    /* Preview section */
+    .preview-inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    /* About */
+    .about-section {
+      padding: 64px 24px;
+    }
+
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    footer {
+      flex-direction: column;
+      gap: 24px;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .footer-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    nav {
+      padding: 16px 20px;
+    }
+
+    .hero {
+      padding: 88px 20px 48px;
+    }
+
+    section {
+      padding: 52px 20px;
+    }
+
+    .actions-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+      flex: 1 1 100%;
+    }
+
+    .send-visual {
+      height: 380px;
+    }
+
+    .cta-section {
+      padding: 64px 20px;
+    }
+
+    .about-section,
+    .banks-section,
+    .actions-strip,
+    .quote-section {
+      padding: 52px 20px;
+    }
+
+    footer {
+      padding: 32px 20px;
+    }
+  }
+
 </style>
 </head>
 <body>
